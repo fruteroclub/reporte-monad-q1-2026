@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { ReactNode } from "react";
 
 // Stat Card Component
@@ -16,7 +16,8 @@ export function StatCard({ icon, label, value, color = "purple" }: StatCardProps
     blue: "from-blue-500/10 to-blue-600/5 border-blue-500/20",
     green: "from-green-500/10 to-green-600/5 border-green-500/20",
     orange: "from-orange-500/10 to-orange-600/5 border-orange-500/20",
-  }[color];
+    pink: "from-pink-500/10 to-pink-600/5 border-pink-500/20",
+  }[color] ?? "from-purple-500/10 to-purple-600/5 border-purple-500/20";
 
   return (
     <div className={`p-4 md:p-6 rounded-xl bg-gradient-to-br ${colorClasses} border backdrop-blur-sm`}>
@@ -65,6 +66,7 @@ interface ProjectCardProps {
   description: string;
   github?: string;
   demo?: string;
+  tweet?: string;
   votes: number;
   points: number;
   rating: number;
@@ -78,11 +80,12 @@ export function ProjectCard({
   description,
   github,
   demo,
+  tweet,
   votes,
   points,
   rating,
 }: ProjectCardProps) {
-  const rankColor = 
+  const rankColor =
     rank === 1 ? "bg-yellow-500/20 border-yellow-500/30 text-yellow-400" :
     rank === 2 ? "bg-gray-400/20 border-gray-400/30 text-gray-300" :
     rank === 3 ? "bg-orange-600/20 border-orange-600/30 text-orange-400" :
@@ -102,16 +105,16 @@ export function ProjectCard({
           </span>
         </div>
       </div>
-      
+
       <p className="text-sm text-gray-300 mb-4 line-clamp-3">{description}</p>
-      
+
       <div className="flex flex-wrap gap-3 mb-4">
         <div className="px-3 py-1 rounded-md bg-black/30 text-xs">
-          <span className="text-gray-400">Votos:</span>{" "}
+          <span className="text-gray-400">Votes:</span>{" "}
           <span className="text-white font-bold">{votes}</span>
         </div>
         <div className="px-3 py-1 rounded-md bg-black/30 text-xs">
-          <span className="text-gray-400">Puntos:</span>{" "}
+          <span className="text-gray-400">Points:</span>{" "}
           <span className="text-white font-bold">{points}</span>
         </div>
         <div className="px-3 py-1 rounded-md bg-black/30 text-xs">
@@ -119,8 +122,8 @@ export function ProjectCard({
           <span className="text-white font-bold">{rating.toFixed(2)}</span>
         </div>
       </div>
-      
-      <div className="flex gap-2">
+
+      <div className="flex flex-wrap gap-2">
         {github && (
           <a
             href={github}
@@ -141,97 +144,18 @@ export function ProjectCard({
             Demo <ExternalLink className="w-3 h-3" />
           </a>
         )}
-      </div>
-    </div>
-  );
-}
-
-// Mentor Card Component
-interface MentorCardProps {
-  name: string;
-  role: string;
-  areas: string[];
-  twitter?: string;
-  linkedin?: string;
-  company?: string;
-}
-
-export function MentorCard({ name, role, areas, twitter, linkedin, company }: MentorCardProps) {
-  return (
-    <div className="p-4 md:p-6 rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[#333] hover:border-purple-500/50 transition-all">
-      <h3 className="text-lg md:text-xl font-bold mb-2">{name}</h3>
-      <p className="text-sm text-purple-400 mb-3">{role}</p>
-      {company && (
-        <p className="text-xs text-gray-400 mb-3">{company}</p>
-      )}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {areas.map((area, i) => (
-          <span
-            key={i}
-            className="px-2 py-1 text-xs rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20"
-          >
-            {area}
-          </span>
-        ))}
-      </div>
-      <div className="flex gap-2">
-        {twitter && (
+        {tweet && (
           <a
-            href={`https://twitter.com/${twitter}`}
+            href={tweet}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 text-xs transition-all border border-blue-500/20"
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 text-sm transition-all border border-sky-500/20"
           >
-            @{twitter}
-          </a>
-        )}
-        {linkedin && (
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 text-xs transition-all border border-purple-500/20"
-          >
-            LinkedIn
+            Tweet <ExternalLink className="w-3 h-3" />
           </a>
         )}
       </div>
     </div>
-  );
-}
-
-// Tweet Card Component
-interface TweetCardProps {
-  url: string;
-  impressions: number;
-  likes: number;
-}
-
-export function TweetCard({ url, impressions, likes }: TweetCardProps) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-4 rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[#333] hover:border-blue-500/50 transition-all group"
-    >
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-2 text-blue-400">
-          <span className="text-sm font-mono">Tweet</span>
-          <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </div>
-      </div>
-      <div className="flex gap-4">
-        <div>
-          <p className="text-xs text-gray-400">Impresiones</p>
-          <p className="text-lg font-bold text-white">{impressions.toLocaleString()}</p>
-        </div>
-        <div>
-          <p className="text-xs text-gray-400">Likes</p>
-          <p className="text-lg font-bold text-white">{likes}</p>
-        </div>
-      </div>
-    </a>
   );
 }
 
@@ -243,10 +167,7 @@ interface NavTabsProps {
 export function NavTabs({ active }: NavTabsProps) {
   const tabs = [
     { id: "overview", label: "Overview", href: "/" },
-    { id: "agente-ia", label: "🍌 Ana Banana", href: "/agente-ia" },
-    { id: "submissions", label: "Proyectos", href: "/submissions" },
-    { id: "convocatoria", label: "Convocatoria", href: "/convocatoria" },
-    { id: "mentoras", label: "Mentoras", href: "/mentoras" },
+    { id: "submissions", label: "Projects", href: "/submissions" },
   ];
 
   return (
