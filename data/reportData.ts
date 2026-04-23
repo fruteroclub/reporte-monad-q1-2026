@@ -510,6 +510,13 @@ export interface Mentor {
   twitter?: string;
 }
 
+export interface SocialPost {
+  url: string;
+  impressions: number;
+  likes: number;
+  source: "Frutero" | "Partner" | "Video";
+}
+
 export const blitz2Mentors: Mentor[] = [
   {
     name: "Denise Flores",
@@ -575,6 +582,64 @@ export const blitz2Mentors: Mentor[] = [
   },
 ];
 
+
+export const blitz1Mentors: Mentor[] = [
+  { name: "Vale Creativo", role: "COO", expertise: "Operations, ideation and pitch coaching", twitter: "ValeCreativo" },
+  { name: "Scarf", role: "Tech Lead", expertise: "Web3 architecture, development and tooling", twitter: "0xscarf" },
+  { name: "Fernanda Tello", role: "Founder, Cripto_UNAM", expertise: "Blockchain education and Web3 ecosystem building", twitter: "Feer_Teello" },
+  { name: "Cindy Jimenez", role: "Fintech & Compliance", expertise: "Payments, fintech systems and compliance", twitter: "signnitt" },
+  { name: "Denise Flores", role: "Ambassador, Women in GameX", expertise: "Digital strategy, game design and community building", twitter: "Dencyborg" },
+  { name: "Brian", role: "DevRel Lead", expertise: "Developer relations and builder support", twitter: "LPBrayan0" },
+];
+
+export const blitz3Mentors: Mentor[] = [
+  { name: "Priscila", role: "Strategist & Co-founder", expertise: "Technology adoption, community building and digital experiences", twitter: "granmetanoia" },
+  { name: "Paulina Nito", role: "Visual Artist", expertise: "Collective creation, documentary research, affective ecologies and collaborative methodologies" },
+  { name: "yoSoyDev.eth", role: "Core Team / DevRel Lead", expertise: "Technical leadership and DevRel for Ethereum communities", twitter: "yoSoyDev_eth" },
+  { name: "Cynthia Castillo", role: "Data Visualization Engineer", expertise: "Data visualization and interactive systems", twitter: "LaMatemaga" },
+  { name: "Pablo Cesar Ruiz", role: "Co-founder, vidata.mx", expertise: "Data products and startup building" },
+  { name: "Mexi", role: "Host, BandaWeb3", expertise: "Community building and educational formats", twitter: "meximalist" },
+];
+
+export const blitz3Submissions: Submission[] = [
+  { rank: 1, title: "SOFIA BY MONAD", team: "Guillermo Angel Arevalo", category: "Education", description: "Sofia is an AI-powered learning ecosystem that turns study into a tangible digital asset through real-time learning validation, on-chain rewards and academic identity on Monad.", github: "https://github.com/Gireru/sofiamonad", demo: "https://sofia-ia-monad.base44.app", tweet: "https://x.com/gireruguille/status/2045638749560721416?s=46", votes: 21, points: 72, rating: 3.43 },
+  { rank: 2, title: "Aforo", team: "Julio Flores", category: "Payments, DeFi, Lending", description: "Aforo advances working capital for Mexican SMEs using receivables-backed liquidity pools on Monad, helping businesses get paid instantly instead of waiting weeks.", github: "https://github.com/julioworklab/aforo", demo: "https://aforo-monad.vercel.app/", tweet: "https://x.com/Julioafs/status/2045652132292952131?s=20", votes: 20, points: 67, rating: 3.35 },
+  { rank: 3, title: "Cadena de Tierra", team: "Esdras Josue", category: "RWA", description: "RWA protocol focused on tokenizing caliche and bringing real-world materials on-chain.", github: "https://github.com/W4RW1CK/Cadena-de-tierra", demo: "https://cadena-de-tierra-j8a9576rb-ejcv0403-2007s-projects.vercel.app/", tweet: "https://x.com/nadia_natera/status/2045650923125420336", votes: 17, points: 57, rating: 3.35 },
+  { rank: 4, title: "FlipChain", team: "Yarek Alejandro Olivares Meneses", category: "Gaming", description: "Competitive trivia platform where players join stake-based rounds, support an NGO and compete for the remaining prize pool.", github: "https://github.com/hdmartinezm/Blitz-Monad", demo: "http://192.168.1.50:3002", tweet: "https://x.com/HDMARTINEZM/status/2045647288731590999", votes: 20, points: 64, rating: 3.20 },
+  { rank: 5, title: "MachineChain", team: "Alejandro Zendejas", category: "DeFi", description: "AI-powered parametric insurance infrastructure that connects industrial IoT sensors to smart contracts and automates payouts in under 10 seconds.", github: "https://github.com/yaus40393/v0-machinechain-landing-page", demo: "https://github.com/yaus40393/MONAD_BLITZ", tweet: "https://x.com/home", votes: 20, points: 63, rating: 3.15 },
+  { rank: 6, title: "Stone", team: "David", category: "Collaboration", description: "MonEscrow is a decentralized freelance escrow platform with milestone-based smart contracts, trustless payouts and on-chain reputation.", github: "https://github.com/Lopsan03/Stone", demo: "https://stone-bay.vercel.app/", tweet: "https://x.com/1800unoob/status/2045637202013552788", votes: 20, points: 63, rating: 3.15 },
+  { rank: 7, title: "Claim Rewards", team: "Candeluisa", category: "Finance", description: "Trustless influencer campaign marketplace for LATAM crypto brands and nano-influencers with escrow, delivery attestation and portable reputation.", github: "https://github.com/candeluisa/claimrewards", demo: "https://claimrewards-yhss.vercel.app/", tweet: "https://x.com/Kalipssoh/status/2045652541233405981?s=20", votes: 21, points: 64, rating: 3.05 },
+  { rank: 8, title: "Liora", team: "Surisadday Bonfil", category: "Payments", description: "On-chain escrow platform for freelancers and clients, ensuring simple and transparent payments without unnecessary intermediaries.", github: "https://github.com/godin-001/liora-monad", demo: "https://frontend-sigma-coral-56.vercel.app/", tweet: "https://x.com/sienna451/status/2045636151168340395?s=46", votes: 21, points: 60, rating: 2.86 },
+  { rank: 9, title: "Healtech", team: "Jaime Pina", category: "Health", description: "Platform for portable medical records that helps people share health history anywhere for faster and more accurate care.", github: "https://github.com/JimmyDeveloper/Saludmonad", demo: "https://medivaul.lovable.app", tweet: "https://x.com/@pachugam50332", votes: 17, points: 48, rating: 2.82 },
+  { rank: 10, title: "Monad's Monad", team: "Cynthia Castillo", category: "Data Viz", description: "Real-time 3D visualization that makes Monad's parallel transaction execution visible by comparing it against Ethereum and BNB Chain.", github: "https://github.com/LaMatemaga/hackathon-monad", demo: "https://hackathon-monad.vercel.app/", tweet: "https://x.com/LaMatemaga/status/2045653964104835262", votes: 21, points: 58, rating: 2.76 },
+  { rank: 11, title: "Abasto", team: "Emmanuel Martinez", category: "Supply Chain", description: "Medication traceability and standardization platform for Mexican health institutions.", github: "https://github.com/godin-001/abasto-monad-blitz", demo: "https://frontend-one-gray-11.vercel.app/", tweet: "https://x.com/EmaCr1pto/status/2045634632897421778", votes: 21, points: 56, rating: 2.67 },
+  { rank: 12, title: "Artesanal Supply Chain", team: "Alejandro", category: "Supply Chain", description: "Mexican crafts with verifiable provenance and traceability.", github: "https://github.com/ALIA2cripto/Artesanal-SupplyChain", demo: "https://artesanal-supply-chain.vercel.app/", tweet: "https://x.com/alexnavafemat", votes: 18, points: 43, rating: 2.39 },
+  { rank: 13, title: "hooks4winners", team: "Irwing", category: "Content, Legal, Data, Retail", description: "Marketplace for verified, specialized content designed for virality.", github: "https://github.com/irwingtello/hooks4winners", demo: "https://github.com/irwingtello/hooks4winners", tweet: "https://x.com/defiforhumanity/status/2045643794897387752", votes: 21, points: 48, rating: 2.29 },
+  { rank: 14, title: "liart", team: "Juan", category: "Gaming", description: "Cute RPG built on Monad.", github: "https://github.com/Scarfdrilo/monad-blitz", demo: "https://monad-blitz-liart.vercel.app/", tweet: "https://x.com/wormsbox_node", votes: 11, points: 21, rating: 1.91 },
+  { rank: 15, title: "LORD SUPREME HYPERCHAD GIGAFARM", team: "godofdeath", category: "DeFi", description: "Minimal and heavily branded DeFi protocol on Monad testnet where users deposit MON and earn HYPR tokens over time.", github: "https://github.com/gitlab/:https://gitlab.com/HackerMasterTheRulerOfLifeAndDeath/monad-testing", demo: "https://gitlab.com/HackerMasterTheRulerOfLifeAndDeath/monad-testing", tweet: "https://x.com/MonadCommunity/status/1978092498409935191", votes: 12, points: 22, rating: 1.83 },
+  { rank: 16, title: "Monad Terminal Academy", team: "Mexi", category: "Education", description: "On-chain educational MUD that teaches terminal basics and rewards learners with TERM tokens on Monad testnet.", github: "https://github.com/mexiweb3/monad-terminal-academy", demo: "https://blitz.mexi.wtf/webclient/", tweet: "https://x.com/meximalist/status/2045633515732037757?s=20", votes: 11, points: 20, rating: 1.82 },
+  { rank: 17, title: "Monad Market", team: "Erezedor", category: "Prediction Market", description: "Draft prediction market with ZK proofs implementation for trader protection.", github: "https://github.com/thetan180/blitzMonterrey", demo: "https://monad-testnet.socialscan.io/address/0x43ceb63962335c83b13c1444967dad25ad8cc616", tweet: "https://x.com/monad_eco", votes: 11, points: 20, rating: 1.82 },
+  { rank: 18, title: "Negative stake chain", team: "blitzmaster", category: "DeFi", description: "Minimal DeFi protocol on Monad testnet where users stake MON and earn MRT rewards linearly over time.", github: "https://github.com/kadevexler/monad-testnet-hack-super", demo: "https://github.com/kadevexler/monad-testnet-hack-super", tweet: "https://x.com/MonadCommunity/status/1978092498409935191", votes: 10, points: 16, rating: 1.60 },
+  { rank: 19, title: "TrustDrop", team: "OpenFruterito", category: "DeFi", description: "On-chain public promises app where users escrow funds against a goal and recover or redirect funds based on completion.", github: "https://github.com/fruterito101/TrustDrop", demo: "https://frontend-p74514bez-fruteroclub.vercel.app/", tweet: "https://x.com/i/status/2045647300593160531", votes: 10, points: 16, rating: 1.60 },
+];
+
+export const socialPosts: SocialPost[] = [
+  { url: "https://x.com/fruteroclub/status/2014067311263510913", impressions: 4525, likes: 70, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2024230169221718403", impressions: 1390, likes: 17, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2036600918817312935", impressions: 965, likes: 35, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2037610646527787459", impressions: 666, likes: 25, source: "Frutero" },
+  { url: "https://x.com/meximalist/status/2014336909330321412", impressions: 1038, likes: 23, source: "Partner" },
+  { url: "https://x.com/troopdegen/status/2019143794738987144", impressions: 933, likes: 37, source: "Partner" },
+  { url: "https://x.com/nicnode/status/2019194292242379040", impressions: 1584, likes: 61, source: "Partner" },
+  { url: "https://x.com/ValeCreativo/status/2025619480320135431", impressions: 1130, likes: 43, source: "Partner" },
+  { url: "https://x.com/ALFA_EDG/status/2025441141571895706", impressions: 1257, likes: 46, source: "Partner" },
+  { url: "https://www.youtube.com/live/5EjcMuisS-Y", impressions: 51, likes: 2, source: "Video" },
+  { url: "https://www.youtube.com/live/wESkRnWvNRM", impressions: 45, likes: 2, source: "Video" },
+  { url: "https://www.youtube.com/live/kNmioOv5zw8", impressions: 40, likes: 3, source: "Video" },
+  { url: "https://www.youtube.com/live/Q4tMZvJaPms", impressions: 27, likes: 3, source: "Video" },
+  { url: "https://www.youtube.com/live/ZjbIktTvii4", impressions: 12, likes: 2, source: "Video" },
+];
+
 // ─── Sponsors & Bounties — Blitz 2 ───
 
 export const blitz2Sponsors = [
@@ -594,13 +659,17 @@ export const blitz2Sponsors = [
 // ─── Q1 2026 Aggregate Stats ───
 
 export const q1Stats = {
-  totalProjects: 34,
-  totalVotes: 1008,
+  totalProjects: 53,
+  totalVotes: 1331,
   blitz1Projects: 18,
   blitz2Projects: 16,
+  blitz3Projects: 19,
   totalImpressions: 62506,
   totalLikes: 1738,
   youtubeStreams: 5,
   blitz1Votes: 495,
   blitz2Votes: 513,
+  blitz3Votes: 323,
+  buildersSupported: 147,
+  mentorsDeployed: 23,
 };
