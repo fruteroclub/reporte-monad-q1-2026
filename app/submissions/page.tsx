@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Trophy, Users, ExternalLink } from "lucide-react";
 import { NavTabs, SectionTitle, ProjectCard } from "@/components/SharedComponents";
-import { blitz1Mentors, blitz1Submissions, blitz2Mentors, blitz2Submissions, blitz3Mentors, blitz3Submissions, q1Stats } from "@/data/reportData";
+import { blitz1Mentors, blitz1Submissions, blitz2Mentors, blitz2Submissions, blitz3Mentors, blitz3Submissions, blitz4Mentors, blitz4Submissions, blitzEventMetrics, q1Stats } from "@/data/reportData";
 import Link from "next/link";
 
-type BlitzTab = "blitz1" | "blitz2" | "blitz3";
+type BlitzTab = "blitz1" | "blitz2" | "blitz3" | "blitz4";
 
 export default function SubmissionsPage() {
   const [activeTab, setActiveTab] = useState<BlitzTab>("blitz1");
@@ -45,9 +45,21 @@ export default function SubmissionsPage() {
       chip: "bg-blue-500/20 border-blue-500/40 text-blue-300",
       border: "bg-blue-500/5 border-blue-500/20",
     },
+    blitz4: {
+      submissions: blitz4Submissions,
+      mentors: blitz4Mentors,
+      title: "Monad Blitz Guadalajara",
+      label: "Blitz GDL",
+      date: "April 24-25, 2026",
+      votes: q1Stats.blitz4Votes,
+      accent: "emerald",
+      chip: "bg-emerald-500/20 border-emerald-500/40 text-emerald-300",
+      border: "bg-emerald-500/5 border-emerald-500/20",
+    },
   } as const;
 
   const current = config[activeTab];
+  const metrics = blitzEventMetrics[activeTab];
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -57,7 +69,7 @@ export default function SubmissionsPage() {
             &larr; Back to Overview
           </Link>
 
-          <SectionTitle icon={<Trophy className="w-8 h-8" />} title="All Projects" subtitle="53 projects across 3 Monad Blitz hackathons" />
+          <SectionTitle icon={<Trophy className="w-8 h-8" />} title="Talent activation archive" subtitle="71 approved projects across the 4 Blitz events, presented as one layer of the wider Q1 Builder Success program" />
 
           <NavTabs active="submissions" />
 
@@ -65,6 +77,7 @@ export default function SubmissionsPage() {
             <button onClick={() => setActiveTab("blitz1")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz1" ? config.blitz1.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz 1</span> — CDMX (Feb 21)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">18 projects</span></button>
             <button onClick={() => setActiveTab("blitz2")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz2" ? config.blitz2.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz 2</span> — CDMX #2 (Mar 27)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">16 projects</span></button>
             <button onClick={() => setActiveTab("blitz3")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz3" ? config.blitz3.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz MTY</span> — Monterrey (Apr 18)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">19 projects</span></button>
+            <button onClick={() => setActiveTab("blitz4")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz4" ? config.blitz4.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz GDL</span> — Guadalajara (Apr 24-25)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">18 approved</span></button>
           </div>
 
           <div className={`p-4 rounded-xl border mb-8 ${current.border}`}>
@@ -74,7 +87,10 @@ export default function SubmissionsPage() {
               <div><span className="text-gray-400">Projects: </span><span className="text-white font-medium">{current.submissions.length}</span></div>
               <div><span className="text-gray-400">Total Votes: </span><span className="text-white font-medium">{current.votes}</span></div>
               <div><span className="text-gray-400">Mentors: </span><span className="text-white font-medium">{current.mentors.length}</span></div>
+              <div><span className="text-gray-400">Luma registrations: </span><span className="text-white font-medium">{metrics.registrations}</span></div>
+              <div><span className="text-gray-400">Builder check-ins: </span><span className="text-white font-medium">{metrics.checkInsDisplay ?? metrics.checkIns}</span></div>
             </div>
+            {(activeTab === "blitz1" || activeTab === "blitz2") && <p className="text-xs text-gray-500 mt-3">Blitz 1 and Blitz 2 share a combined figure of 97 confirmed check-ins while the event-level split is still being reconciled.</p>}
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
@@ -85,12 +101,12 @@ export default function SubmissionsPage() {
 
           <div className="mt-12 md:mt-16">
             <div className="flex items-start gap-3 mb-6 md:mb-8">
-              <div className={`p-2 rounded-lg ${activeTab === "blitz1" ? "bg-purple-500/10 text-purple-400" : activeTab === "blitz2" ? "bg-pink-500/10 text-pink-400" : "bg-blue-500/10 text-blue-400"} shrink-0`}>
+              <div className={`p-2 rounded-lg ${activeTab === "blitz1" ? "bg-purple-500/10 text-purple-400" : activeTab === "blitz2" ? "bg-pink-500/10 text-pink-400" : activeTab === "blitz3" ? "bg-blue-500/10 text-blue-400" : "bg-emerald-500/10 text-emerald-400"} shrink-0`}>
                 <Users className="w-6 h-6 md:w-8 md:h-8" />
               </div>
               <div>
                 <h2 className="text-2xl md:text-4xl font-bold mb-2">{current.label} — Mentors</h2>
-                <p className="text-sm md:text-base text-gray-400">{current.mentors.length} mentors guiding builders through {current.title}</p>
+                <p className="text-sm md:text-base text-gray-400">{current.mentors.length} mentors supporting builders through {current.title}</p>
               </div>
             </div>
 

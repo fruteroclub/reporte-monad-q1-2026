@@ -448,6 +448,27 @@ export const blitz2Submissions: Submission[] = [
   },
 ];
 
+export const blitz4Submissions: Submission[] = [
+  { rank: 1, title: "MyHealth", team: "Daniel Aguilar", category: "DeMed", description: "Tu seguro de vida digital: información médica crítica y alertas en tiempo real con un solo toque de manera descentralizada", github: "https://github.com/ManuelCanulDev/MyHealth", demo: "https://my-health.grupokamar.com.mx/", tweet: "https://x.com/4liyat/status/2048099563810992528?s=20", votes: 32, points: 103, rating: 3.22 },
+  { rank: 2, title: "MiZona", team: "David", category: "BlockChain", description: "Mi Zona transforma el miedo en información accionable. Somos una plataforma de seguridad colaborativa que utiliza criptografía para validar incidentes sin vulnerar al usuario. Propuesta: Mapa de riesgo dinámico y gratuito para el ciudadano. Modelo: Monetización de data estratégica para sectores de logística, seguros y real estate. Visión: Proyecto escalable con miras a PosibleMTY y Reto Zapopan, enfocado en construir un México mejor a través de ciudadanos conectados y protegidos. Porque para crear un mejor México, necesitamos mejores mexicanos.", github: "https://github.com/Lopsan03/MiZona", demo: "https://mi-zona.vercel.app/", votes: 34, points: 108, rating: 3.18 },
+  { rank: 3, title: "TrepaCerros", team: "Damian Torres", category: "NFT", description: "Sal, recolecta basura en los senderos de Guadalajara, y monetiza tu trepada en la red Monad. Cada trepada se firma en Monad y convierte impacto local en valor on-chain.", github: "https://github.com/damiantorresmx11/trepacerros-blitz-gdl", demo: "https://trepacerros.xyz/", votes: 33, points: 101, rating: 3.06 },
+  { rank: 4, title: "Solar Chain MX", team: "Tania", category: "Sustentability", description: "Plataforma P2P de compraventa de energía solar entre vecinos, construida sobre Monad blockchain.", github: "https://github.com/Tania-Sec/Solar-Chain", demo: "https://solar-chain-five.vercel.app/", votes: 34, points: 104, rating: 3.06 },
+  { rank: 5, title: "Alpo", team: "Nefertari Garcia", category: "Social Impact & Safety", description: "Herramienta de detección temprana de señales de reclutamiento criminal hacia menores mediante análisis de audio con evidencia anclada en Monad.", github: "https://github.com/Nefertari-Garcia/ALPO.git", demo: "https://alpo2.vercel.app", tweet: "https://x.com/alexisl17686518/status/2047990198630297895?s=46&t=3kmrAptl-eCXzxdeLmQ3lA", votes: 33, points: 97, rating: 2.94 },
+  { rank: 6, title: "Propio", team: "Diego", category: "RWA", description: "Plataforma para inversión fraccionada en bienes raíces con propiedad y gobernanza respaldadas on-chain.", github: "https://github.com/Chere3/propio", demo: "https://propio.vercel.app/", tweet: "https://x.com/CristianUbiarco/status/2048083896797888982", votes: 34, points: 96, rating: 2.82 },
+  { rank: 7, title: "TokenAgua", team: "Jesus Fernandez", category: "DeFi", description: "dApp de gestión hídrica descentralizada que incentiva el reporte ciudadano de fugas con recompensas en tokens AGUA.", github: "https://github.com/JAFT3/TokenAgua-Monad", demo: "https://token-agua-monad.vercel.app", tweet: "https://x.com/vitaal016/status/2048098240264847780?s=46&t=zrfonqkKZsGWfwbfooY0vA", votes: 32, points: 90, rating: 2.81 },
+  { rank: 8, title: "Nido", team: "JOSE ernesto RAMIREZ", category: "Consumer app", description: "Red descentralizada de hospitalidad sobre Monad que recompensa reseñas confiables y reputación transparente entre anfitriones y viajeros.", github: "https://github.com/MetaNetMx/trust", demo: "https://trust-xi-rust.vercel.app/", tweet: "https://x.com/VecinoFederacha/status/2048084725974065357?s=20", votes: 34, points: 94, rating: 2.76 },
+  { rank: 9, title: "BIO REACTOR TOKEN", team: "MA4KO", category: "SALUD", description: "Bio reactor para cultivo tecnificado orientado a producción de proteína.", github: "https://github.com/godin-001/bioreactor-token-mvp", demo: "https://brt-mvp.vercel.app/", tweet: "https://x.com/Markocut/status/2048095651951497358?s=20", votes: 32, points: 88, rating: 2.75 },
+  { rank: 10, title: "StockBuddy", team: "Saul Rangel", category: "Supply chain", description: "Asistente de inventario por voz y fotografía para pequeños negocios, con trazabilidad inmutable en blockchain.", github: "https://github.com/Makifrut1/stockbuddy-ai-assistant", demo: "https://stockbuddy-ai-assistant.vercel.app/", votes: 30, points: 80, rating: 2.67 },
+  { rank: 11, title: "Ruta Sagrada ... Donde Nacen las Leyendas", team: "Anabell Hernández Flores", category: "Consumer App", description: "Experiencia que convierte la ruta del aficionado en un ciclo vivo de historia, legado y activos coleccionables.", github: "https://github.com/soyanabellh-maker/sacred-route-monad", demo: "https://sacred-route-monad.lovable.app/", votes: 33, points: 87, rating: 2.64 },
+  { rank: 12, title: "AgentSuite", team: "Robin", category: "AI Agents", description: "Agentic ERP que automatiza operaciones empresariales con tareas de AI en segundo plano.", github: "https://github.com/robinhodl69/AgentSuite", demo: "https://agent-suite-plum.vercel.app/", tweet: "https://x.com/robinhodl69/status/2048083511479783860?s=20", votes: 34, points: 85, rating: 2.50 },
+  { rank: 13, title: "Monadpolis", team: "Irwing", category: "AI, Attestations", description: "Agente urbano conversacional para experiencias mundialistas con contexto local y verificación on-chain.", github: "https://github.com/Irwingduran/monad-blitz-gdl.git", demo: "https://monadpolis.vercel.app/", tweet: "https://x.com/Irwingduran/status/2048093581496242558?s=20", votes: 32, points: 73, rating: 2.28 },
+  { rank: 14, title: "Avalo", team: "Joel Buenrostro", category: "Consumer app", description: "Smart escrow para depósitos de renta en Monad.", github: "https://github.com/JoelBuenrostro/Avalo", demo: "https://avalo-eta.vercel.app/", tweet: "https://x.com/esteGeek/status/2047931852107690434", votes: 34, points: 77, rating: 2.26 },
+  { rank: 15, title: "Masa Crítica", team: "Alier Sánchez", category: "RWA, B2B Marketplace, Supply Chain", description: "Marketplace B2B que consolida demanda y oferta de pequeños productores con compromisos registrados on-chain.", github: "https://github.com/geouno/masa-critica", demo: "https://masa-critica-web.vercel.app/", tweet: "https://x.com/hytemax/status/2048097949683437655", votes: 33, points: 74, rating: 2.24 },
+  { rank: 16, title: "FlowChain", team: "AMERICA NEFTALI RAMIREZ MEDINA", category: "vehículos autónomos", description: "Aplicación para coordinación inteligente del tráfico con incentivos en blockchain.", github: "https://github.com/godin-001/flowchain-mvp", demo: "https://flowchain-mvp.vercel.app/", tweet: "https://x.com/AmricaRamr72334/status/2048084310280855977?s=20", votes: 32, points: 68, rating: 2.13 },
+  { rank: 17, title: "MonadTube", team: "Manuel Rivera", category: "Consumer", description: "Streaming platform que cobra por segundo consumido y habilita tips con efectos en tiempo real.", github: "https://github.com/menuRivera/monad-tube", demo: "https://github.com/menuRivera/monad-tube", votes: 35, points: 74, rating: 2.11 },
+  { rank: 18, title: "Perpetuo flow", team: "Vianney Rivera", category: "Consumer App", description: "POS conversacional para clientes de cafetería.", github: "https://github.com/godin-001/perpetuo-flow", demo: "https://perpetuo-flow.vercel.app/", votes: 22, points: 43, rating: 1.95 },
+];
+
 // ─── YouTube Streams ───
 
 export const youtubeStreams = [
@@ -491,14 +512,14 @@ export const youtubeStreams = [
 // ─── Social Stats ───
 
 export const socialStats = {
-  fruteroImpressions: 30308,
-  fruteroLikes: 686,
-  partnerImpressions: 26380,
-  partnerLikes: 897,
-  videoViews: 5818,
-  videoLikes: 155,
-  totalImpressions: 62506,
-  totalLikes: 1738,
+  fruteroImpressions: 38665,
+  fruteroLikes: 932,
+  partnerImpressions: 47131,
+  partnerLikes: 1420,
+  videoViews: 7622,
+  videoLikes: 218,
+  totalImpressions: 93418,
+  totalLikes: 2570,
 };
 
 // ─── Mentors — Blitz 2 ───
@@ -517,88 +538,61 @@ export interface SocialPost {
   source: "Frutero" | "Partner" | "Video";
 }
 
+export interface BlitzEventMetric {
+  key: "blitz1" | "blitz2" | "blitz3" | "blitz4";
+  label: string;
+  title: string;
+  date: string;
+  lumaUrl: string;
+  registrations: number;
+  checkIns: number | null;
+  checkInsDisplay?: string;
+}
+
 export const blitz2Mentors: Mentor[] = [
-  {
-    name: "Denise Flores",
-    role: "Digital Strategist & Game Design",
-    expertise: "Digital strategy, video game design, community building, Web3",
-    twitter: "Dencyborg",
-  },
-  {
-    name: "Dorian",
-    role: "Impact Business Models",
-    expertise: "Impact business model design that scales — integrating AI, Web3 with monetization, growth and social/environmental impact strategies",
-  },
-  {
-    name: "Wendy Lopez",
-    role: "Growth Marketing",
-    expertise: "AI ops, global and LATAM go-to-market, content systems, UGC, funnels. Ex-Growth Lead LATAM at Xverse",
-    twitter: "wenlopezn",
-  },
-  {
-    name: "Mel (troopdegen)",
-    role: "Frutero Founder — Product & Tech",
-    expertise: "Product, web development, AI agents, cloud, architecture",
-    twitter: "troopdegen",
-  },
-  {
-    name: "Scarf",
-    role: "Tech Lead — Web3 Architecture",
-    expertise: "Web3 architecture, development, tooling, AI, MVP",
-    twitter: "0xscarf",
-  },
-  {
-    name: "Brian",
-    role: "Product Lead — Accelerated Development",
-    expertise: "AI agents, Web3, fast shipping",
-  },
-  {
-    name: "Vale",
-    role: "COO — Ideation & Pitch",
-    expertise: "Technical debugging, ideation, pitch coaching",
-    twitter: "ValeCreativo",
-  },
-  {
-    name: "Fernanda Tello",
-    role: "Web3 Ecosystem Builder",
-    expertise: "Web3 ecosystem, blockchain education, finance and university talent development",
-    twitter: "feer_teello",
-  },
-  {
-    name: "Maria Fernanda Gonzalez",
-    role: "PR & Strategic Comms",
-    expertise: "PR consulting, headhunting and innovation for tech startups. Strategic positioning, storytelling and go-to-market for Web3, AI and early-stage startups",
-    twitter: "Feriki",
-  },
-  {
-    name: "Jazz",
-    role: "Ecosystem Lead — Design & UX",
-    expertise: "Graphic design, UX/UI, branding and communication",
-  },
-  {
-    name: "Vianey Alvarado",
-    role: "Mentor",
-    expertise: "Coming soon",
-  },
+  { name: "Mel", role: "Founder, Frutero Club", expertise: "Founder-level product and ecosystem guidance", twitter: "troopdegen" },
+  { name: "Jazz", role: "Community Lead, Frutero Club", expertise: "Community activation and builder support", twitter: "driade_1" },
+  { name: "Maria Fernanda Gonzalez", role: "Founder, KostikMex", expertise: "Strategic communications and founder support", twitter: "FERIKI" },
+  { name: "Fernanda Tello", role: "Founder, Cripto_UNAM", expertise: "Blockchain education and Web3 ecosystem building", twitter: "Feer_Teello" },
+  { name: "Denise Flores", role: "Ambassador, Women in GameX", expertise: "Digital strategy, gaming and community building", twitter: "Dencyborg" },
+  { name: "Brian Lopez", role: "DevRel Lead, Frutero Club", expertise: "Developer relations and technical builder support", twitter: "LPBrayan0" },
+  { name: "Sol", role: "Founder, AnguloWeb3", expertise: "Community-led Web3 education and founder support", twitter: "solxpriestess" },
+  { name: "Vialvalv", role: "Building Opportuni", expertise: "Opportunity design and ecosystem collaboration", twitter: "Vialvalv" },
+  { name: "Wendy Lopez", role: "Founder, bythelabxyz", expertise: "Growth marketing and creative strategy", twitter: "Wenlopezn" },
 ];
 
-
 export const blitz1Mentors: Mentor[] = [
-  { name: "Vale Creativo", role: "COO", expertise: "Operations, ideation and pitch coaching", twitter: "ValeCreativo" },
-  { name: "Scarf", role: "Tech Lead", expertise: "Web3 architecture, development and tooling", twitter: "0xscarf" },
+  { name: "Mel", role: "Founder, Frutero Club", expertise: "Founder-level product and ecosystem guidance", twitter: "troopdegen" },
+  { name: "Jazz", role: "Community Lead, Frutero Club", expertise: "Community activation and builder support", twitter: "driade_1" },
+  { name: "Maria Fernanda Gonzalez", role: "Founder, KostikMex", expertise: "Strategic communications and founder support", twitter: "FERIKI" },
+  { name: "Vale Creativo", role: "COO, Frutero Club", expertise: "Operations, ideation and pitch coaching", twitter: "ValeCreativo" },
+  { name: "Scarf", role: "Tech Lead, Frutero Club", expertise: "Web3 architecture, development and tooling", twitter: "0xscarf" },
   { name: "Fernanda Tello", role: "Founder, Cripto_UNAM", expertise: "Blockchain education and Web3 ecosystem building", twitter: "Feer_Teello" },
-  { name: "Cindy Jimenez", role: "Fintech & Compliance", expertise: "Payments, fintech systems and compliance", twitter: "signnitt" },
-  { name: "Denise Flores", role: "Ambassador, Women in GameX", expertise: "Digital strategy, game design and community building", twitter: "Dencyborg" },
-  { name: "Brian", role: "DevRel Lead", expertise: "Developer relations and builder support", twitter: "LPBrayan0" },
+  { name: "Cindy Jimenez", role: "Kompensa", expertise: "Fintech, payments and compliance", twitter: "signnitt" },
+  { name: "Denise Flores", role: "Ambassador, Women in GameX", expertise: "Digital strategy, gaming and community building", twitter: "Dencyborg" },
+  { name: "Brian Lopez", role: "DevRel Lead, Frutero Club", expertise: "Developer relations and technical builder support", twitter: "LPBrayan0" },
 ];
 
 export const blitz3Mentors: Mentor[] = [
   { name: "Priscila", role: "Strategist & Co-founder", expertise: "Technology adoption, community building and digital experiences", twitter: "granmetanoia" },
   { name: "Paulina Nito", role: "Visual Artist", expertise: "Collective creation, documentary research, affective ecologies and collaborative methodologies" },
-  { name: "yoSoyDev.eth", role: "Core Team / DevRel Lead", expertise: "Technical leadership and DevRel for Ethereum communities", twitter: "yoSoyDev_eth" },
-  { name: "Cynthia Castillo", role: "Data Visualization Engineer", expertise: "Data visualization and interactive systems", twitter: "LaMatemaga" },
-  { name: "Pablo Cesar Ruiz", role: "Co-founder, vidata.mx", expertise: "Data products and startup building" },
+  { name: "yoSoyDev.eth", role: "Core Team, Ethereum México / ETH MTY", expertise: "Technical leadership and DevRel for Ethereum communities", twitter: "yoSoyDev_eth" },
+  { name: "Cynthia Castillo", role: "Data Visualization Engineer, Zillow", expertise: "Data visualization and interactive systems", twitter: "LaMatemaga" },
+  { name: "Pablo César Ruiz", role: "Co-founder, vidata.mx", expertise: "Data products and startup building" },
   { name: "Mexi", role: "Host, BandaWeb3", expertise: "Community building and educational formats", twitter: "meximalist" },
+  { name: "Scarf", role: "Tech Lead, Frutero Club", expertise: "Web3 architecture, development and tooling", twitter: "0xscarf" },
+  { name: "Vale Creativo", role: "COO, Frutero Club", expertise: "Operations, ideation and pitch coaching", twitter: "ValeCreativo" },
+  { name: "Brian Lopez", role: "DevRel Lead, Frutero Club", expertise: "Developer relations and technical builder support", twitter: "LPBrayan0" },
+  { name: "Luisa Cande", role: "Founder, CryptoBrunch", expertise: "Community building and founder support", twitter: "Kalipssoh" },
+  { name: "Ema Cripto", role: "Marketing Lead, Frutero Club", expertise: "Marketing, narrative and non-technical mentoring", twitter: "EmaCr1pto" },
+];
+
+export const blitz4Mentors: Mentor[] = [
+  { name: "Brenda Vazquez", role: "Product Design Specialist", expertise: "Product design and builder guidance" },
+  { name: "Brian Lopez", role: "DevRel Lead, Frutero", expertise: "Technical mentoring and developer relations", twitter: "LPBrayan0" },
+  { name: "Ema Cripto", role: "Marketing Lead, Frutero Club", expertise: "Non-technical mentoring, marketing and narrative support", twitter: "EmaCr1pto" },
+  { name: "Vale Creativo", role: "Director of Operations", expertise: "Technical and non-technical mentoring", twitter: "ValeCreativo" },
+  { name: "Scarf", role: "Technical Lead", expertise: "Technical mentoring and Web3 architecture", twitter: "0xscarf" },
 ];
 
 export const blitz3Submissions: Submission[] = [
@@ -625,51 +619,107 @@ export const blitz3Submissions: Submission[] = [
 
 export const socialPosts: SocialPost[] = [
   { url: "https://x.com/fruteroclub/status/2014067311263510913", impressions: 4525, likes: 70, source: "Frutero" },
+  { url: "https://www.instagram.com/p/DVCbDZmDrSd/", impressions: 1876, likes: 67, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2016239863733842066", impressions: 1458, likes: 18, source: "Frutero" },
   { url: "https://x.com/fruteroclub/status/2024230169221718403", impressions: 1390, likes: 17, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2044190063244759270", impressions: 1268, likes: 31, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2024571394105766122", impressions: 1156, likes: 9, source: "Frutero" },
+  { url: "https://x.com/fruteroclub/status/2044959859733409983", impressions: 1005, likes: 18, source: "Frutero" },
   { url: "https://x.com/fruteroclub/status/2036600918817312935", impressions: 965, likes: 35, source: "Frutero" },
-  { url: "https://x.com/fruteroclub/status/2037610646527787459", impressions: 666, likes: 25, source: "Frutero" },
-  { url: "https://x.com/meximalist/status/2014336909330321412", impressions: 1038, likes: 23, source: "Partner" },
-  { url: "https://x.com/troopdegen/status/2019143794738987144", impressions: 933, likes: 37, source: "Partner" },
+  { url: "https://x.com/Julioafs/status/2045652132292952131", impressions: 2300, likes: 11, source: "Partner" },
   { url: "https://x.com/nicnode/status/2019194292242379040", impressions: 1584, likes: 61, source: "Partner" },
-  { url: "https://x.com/ValeCreativo/status/2025619480320135431", impressions: 1130, likes: 43, source: "Partner" },
+  { url: "https://x.com/Julioafs/status/2045801216857231837", impressions: 1570, likes: 33, source: "Partner" },
   { url: "https://x.com/ALFA_EDG/status/2025441141571895706", impressions: 1257, likes: 46, source: "Partner" },
+  { url: "https://x.com/ToryDomK/status/2025245765157712280", impressions: 1175, likes: 31, source: "Partner" },
+  { url: "https://x.com/ValeCreativo/status/2025619480320135431", impressions: 1130, likes: 43, source: "Partner" },
+  { url: "https://x.com/fruteroclub/status/2021671863999779294", impressions: 1635, likes: 24, source: "Video" },
+  { url: "https://x.com/fruteroclub/status/2029712246369099833", impressions: 911, likes: 13, source: "Video" },
+  { url: "https://x.com/fruteroclub/status/2026728664193191994", impressions: 719, likes: 17, source: "Video" },
+  { url: "https://x.com/fruteroclub/status/2041297704765050981", impressions: 610, likes: 15, source: "Video" },
+  { url: "https://x.com/fruteroclub/status/2029252896953450842", impressions: 585, likes: 15, source: "Video" },
+  { url: "https://x.com/signnitt/status/2029070010342359293", impressions: 443, likes: 13, source: "Video" },
+  { url: "https://x.com/fruteroclub/status/2040143646524096729", impressions: 393, likes: 21, source: "Video" },
   { url: "https://www.youtube.com/live/5EjcMuisS-Y", impressions: 51, likes: 2, source: "Video" },
-  { url: "https://www.youtube.com/live/wESkRnWvNRM", impressions: 45, likes: 2, source: "Video" },
-  { url: "https://www.youtube.com/live/kNmioOv5zw8", impressions: 40, likes: 3, source: "Video" },
-  { url: "https://www.youtube.com/live/Q4tMZvJaPms", impressions: 27, likes: 3, source: "Video" },
-  { url: "https://www.youtube.com/live/ZjbIktTvii4", impressions: 12, likes: 2, source: "Video" },
 ];
 
-// ─── Sponsors & Bounties — Blitz 2 ───
+// ─── Sponsors — report scope reference only ───
 
 export const blitz2Sponsors = [
   {
     name: "Monad Foundation",
-    role: "Main Sponsor",
+    role: "Program Partner",
     url: "https://monad.xyz",
   },
-  {
-    name: "Etherfuse",
-    role: "Bounty Partner",
-    description: "Special bounty for projects integrating tokenized CETES (Stablebonds) — enabling real-world Mexican government bond yields on-chain",
-    url: "https://etherfuse.com",
-  },
 ];
+
+export const blitzEventMetrics: Record<"blitz1" | "blitz2" | "blitz3" | "blitz4", BlitzEventMetric> = {
+  blitz1: {
+    key: "blitz1",
+    label: "Blitz 1",
+    title: "Monad Blitz Ciudad de México",
+    date: "February 21, 2026",
+    lumaUrl: "https://luma.com/6pk4opdb",
+    registrations: 128,
+    checkIns: null,
+    checkInsDisplay: "Included in combined 97",
+  },
+  blitz2: {
+    key: "blitz2",
+    label: "Blitz 2",
+    title: "Monad Blitz Ciudad de México #2",
+    date: "March 27, 2026",
+    lumaUrl: "https://luma.com/blitz-cdmx-mar2026?tk=Tu03nM",
+    registrations: 114,
+    checkIns: null,
+    checkInsDisplay: "Included in combined 97",
+  },
+  blitz3: {
+    key: "blitz3",
+    label: "Blitz MTY",
+    title: "Monad Blitz Monterrey",
+    date: "April 18, 2026",
+    lumaUrl: "https://luma.com/blitz-mty-apr-2026",
+    registrations: 92,
+    checkIns: 50,
+  },
+  blitz4: {
+    key: "blitz4",
+    label: "Blitz GDL",
+    title: "Monad Blitz Guadalajara",
+    date: "April 24-25, 2026",
+    lumaUrl: "https://luma.com/blitz-gdl-apr-2026",
+    registrations: 89,
+    checkIns: 51,
+  },
+};
+
+const uniqueMentorNames = new Set([
+  ...blitz1Mentors.map((mentor) => mentor.name),
+  ...blitz2Mentors.map((mentor) => mentor.name),
+  ...blitz3Mentors.map((mentor) => mentor.name),
+  ...blitz4Mentors.map((mentor) => mentor.name),
+]);
+
+const totalLumaRegistrations = Object.values(blitzEventMetrics).reduce((sum, event) => sum + event.registrations, 0);
 
 // ─── Q1 2026 Aggregate Stats ───
 
 export const q1Stats = {
-  totalProjects: 53,
-  totalVotes: 1331,
+  totalProjects: 71,
+  totalVotes: 1914,
   blitz1Projects: 18,
   blitz2Projects: 16,
   blitz3Projects: 19,
-  totalImpressions: 62506,
-  totalLikes: 1738,
+  blitz4Projects: 18,
+  totalImpressions: 93418,
+  totalLikes: 2570,
   youtubeStreams: 5,
+  hackathons: 4,
   blitz1Votes: 495,
   blitz2Votes: 513,
   blitz3Votes: 323,
-  buildersSupported: 147,
-  mentorsDeployed: 23,
+  blitz4Votes: 583,
+  totalLumaRegistrations,
+  verifiedBuilderCheckins: 198,
+  uniqueMentors: uniqueMentorNames.size,
 };

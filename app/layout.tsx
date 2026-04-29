@@ -5,17 +5,17 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Monad × Frutero Club — Q1 2026 Report",
-  description: "Q1 2026 quarterly report: DevRel as a Service for the Monad ecosystem by Frutero Club",
+  title: "Monad × Frutero Club - Q1 2026 Report",
+  description: "Q1 2026 Builder Success and DevRel support report for Monad in Mexico, including talent activation, content reach, livestreams, and ongoing builder support.",
   openGraph: {
-    title: "Monad × Frutero Club — Q1 2026 Report",
-    description: "DevRel as a Service for the Monad ecosystem — 34 projects, 2 hackathons, 62K+ reach",
+    title: "Monad × Frutero Club - Q1 2026 Report",
+    description: "Builder Success and DevRel support for Monad in Mexico across activations, content, livestreams, and Blitz events.",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monad × Frutero Club — Q1 2026 Report",
-    description: "DevRel as a Service for the Monad ecosystem — 34 projects, 2 hackathons, 62K+ reach",
+    title: "Monad × Frutero Club - Q1 2026 Report",
+    description: "Builder Success and DevRel support for Monad in Mexico across activations, content, livestreams, and Blitz events.",
     images: ["/og-image.png"],
   },
 };
