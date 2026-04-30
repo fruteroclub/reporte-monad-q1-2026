@@ -1,10 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { Trophy, Users, ExternalLink } from "lucide-react";
-import { NavTabs, SectionTitle, ProjectCard } from "@/components/SharedComponents";
-import { blitz1Mentors, blitz1Submissions, blitz2Mentors, blitz2Submissions, blitz3Mentors, blitz3Submissions, blitz4Mentors, blitz4Submissions, blitzEventMetrics, q1Stats } from "@/data/reportData";
 import Link from "next/link";
+import { useState } from "react";
+import { ExternalLink, Trophy, Users } from "lucide-react";
+import { NavTabs, ProjectCard, SectionTitle } from "@/components/SharedComponents";
+import {
+  blitz1Mentors,
+  blitz1Submissions,
+  blitz2Mentors,
+  blitz2Submissions,
+  blitz3Mentors,
+  blitz3Submissions,
+  blitz4Mentors,
+  blitz4Submissions,
+  blitzEventMetrics,
+  q1Stats,
+} from "@/data/reportData";
 
 type BlitzTab = "blitz1" | "blitz2" | "blitz3" | "blitz4";
 
@@ -19,9 +30,6 @@ export default function SubmissionsPage() {
       label: "Blitz 1",
       date: "February 21, 2026",
       votes: q1Stats.blitz1Votes,
-      accent: "purple",
-      chip: "bg-purple-500/20 border-purple-500/40 text-purple-300",
-      border: "bg-purple-500/5 border-purple-500/20",
     },
     blitz2: {
       submissions: blitz2Submissions,
@@ -30,9 +38,6 @@ export default function SubmissionsPage() {
       label: "Blitz 2",
       date: "March 27, 2026",
       votes: q1Stats.blitz2Votes,
-      accent: "pink",
-      chip: "bg-pink-500/20 border-pink-500/40 text-pink-300",
-      border: "bg-pink-500/5 border-pink-500/20",
     },
     blitz3: {
       submissions: blitz3Submissions,
@@ -41,9 +46,6 @@ export default function SubmissionsPage() {
       label: "Blitz MTY",
       date: "April 18, 2026",
       votes: q1Stats.blitz3Votes,
-      accent: "blue",
-      chip: "bg-blue-500/20 border-blue-500/40 text-blue-300",
-      border: "bg-blue-500/5 border-blue-500/20",
     },
     blitz4: {
       submissions: blitz4Submissions,
@@ -52,9 +54,6 @@ export default function SubmissionsPage() {
       label: "Blitz GDL",
       date: "April 24-25, 2026",
       votes: q1Stats.blitz4Votes,
-      accent: "emerald",
-      chip: "bg-emerald-500/20 border-emerald-500/40 text-emerald-300",
-      border: "bg-emerald-500/5 border-emerald-500/20",
     },
   } as const;
 
@@ -62,63 +61,91 @@ export default function SubmissionsPage() {
   const metrics = blitzEventMetrics[activeTab];
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      <section className="py-12 md:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-6 transition-colors">
+    <main className="min-h-screen bg-[#f4ecdf] text-[#241b15]">
+      <section className="px-4 py-12 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <Link href="/" className="mb-6 inline-flex items-center gap-2 text-sm text-[#6c6258] transition-colors hover:text-[#241b15]">
             &larr; Back to Overview
           </Link>
 
-          <SectionTitle icon={<Trophy className="w-8 h-8" />} title="Talent activation archive" subtitle="71 approved projects across the 4 Blitz events, presented as one layer of the wider Q1 Builder Success program" />
+          <SectionTitle
+            icon={<Trophy className="h-8 w-8" />}
+            title="Project archive"
+            subtitle="71 approved projects across the 4 Blitz events, presented as the visible output of one layer inside the broader Q1 Builder Success program"
+          />
 
           <NavTabs active="submissions" />
 
-          <div className="flex flex-wrap gap-2 mb-8">
-            <button onClick={() => setActiveTab("blitz1")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz1" ? config.blitz1.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz 1</span> — CDMX (Feb 21)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">18 projects</span></button>
-            <button onClick={() => setActiveTab("blitz2")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz2" ? config.blitz2.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz 2</span> — CDMX #2 (Mar 27)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">16 projects</span></button>
-            <button onClick={() => setActiveTab("blitz3")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz3" ? config.blitz3.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz MTY</span> — Monterrey (Apr 18)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">19 projects</span></button>
-            <button onClick={() => setActiveTab("blitz4")} className={`px-5 py-3 rounded-xl text-sm font-medium transition-all border ${activeTab === "blitz4" ? config.blitz4.chip : "bg-[#1a1a1a] border-[#333] text-gray-400 hover:bg-[#222] hover:text-white"}`}><span className="font-bold">Blitz GDL</span> — Guadalajara (Apr 24-25)<span className="ml-2 px-2 py-0.5 rounded-md bg-black/30 text-xs">18 approved</span></button>
+          <div className="mb-8 flex flex-wrap gap-2">
+            {([
+              ["blitz1", "Blitz 1", "CDMX", "18 projects"],
+              ["blitz2", "Blitz 2", "CDMX #2", "16 projects"],
+              ["blitz3", "Blitz MTY", "Monterrey", "19 projects"],
+              ["blitz4", "Blitz GDL", "Guadalajara", "18 approved"],
+            ] as const).map(([key, label, city, count]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`rounded-full border px-4 py-3 text-sm transition-all ${
+                  activeTab === key
+                    ? "border-[#241b15] bg-[#241b15] text-[#f7f3ee]"
+                    : "border-[#ddd3c8] bg-white/75 text-[#5f5144] hover:bg-white"
+                }`}
+              >
+                <span className="font-semibold">{label}</span> · {city}
+                <span className="ml-2 rounded-full border border-black/5 bg-black/5 px-2 py-0.5 text-xs">{count}</span>
+              </button>
+            ))}
           </div>
 
-          <div className={`p-4 rounded-xl border mb-8 ${current.border}`}>
-            <div className="flex flex-wrap gap-6 text-sm">
-              <div><span className="text-gray-400">Event: </span><span className="text-white font-medium">{current.title}</span></div>
-              <div><span className="text-gray-400">Date: </span><span className="text-white font-medium">{current.date}</span></div>
-              <div><span className="text-gray-400">Projects: </span><span className="text-white font-medium">{current.submissions.length}</span></div>
-              <div><span className="text-gray-400">Total Votes: </span><span className="text-white font-medium">{current.votes}</span></div>
-              <div><span className="text-gray-400">Mentors: </span><span className="text-white font-medium">{current.mentors.length}</span></div>
-              <div><span className="text-gray-400">Luma registrations: </span><span className="text-white font-medium">{metrics.registrations}</span></div>
-              <div><span className="text-gray-400">Builder check-ins: </span><span className="text-white font-medium">{metrics.checkInsDisplay ?? metrics.checkIns}</span></div>
+          <div className="mb-8 rounded-[28px] border border-[#ddd3c8] bg-white/80 p-5 shadow-[0_10px_30px_rgba(36,27,21,0.05)]">
+            <div className="flex flex-wrap gap-6 text-sm text-[#5f5144]">
+              <div><span className="text-[#8a7664]">Event: </span><span className="font-medium text-[#241b15]">{current.title}</span></div>
+              <div><span className="text-[#8a7664]">Date: </span><span className="font-medium text-[#241b15]">{current.date}</span></div>
+              <div><span className="text-[#8a7664]">Projects: </span><span className="font-medium text-[#241b15]">{current.submissions.length}</span></div>
+              <div><span className="text-[#8a7664]">Votes: </span><span className="font-medium text-[#241b15]">{current.votes}</span></div>
+              <div><span className="text-[#8a7664]">Mentors: </span><span className="font-medium text-[#241b15]">{current.mentors.length}</span></div>
+              <div><span className="text-[#8a7664]">Registrations: </span><span className="font-medium text-[#241b15]">{metrics.registrations}</span></div>
+              <div><span className="text-[#8a7664]">Check-ins: </span><span className="font-medium text-[#241b15]">{metrics.checkInsDisplay ?? metrics.checkIns}</span></div>
             </div>
-            {(activeTab === "blitz1" || activeTab === "blitz2") && <p className="text-xs text-gray-500 mt-3">Blitz 1 and Blitz 2 share a combined figure of 97 confirmed check-ins while the event-level split is still being reconciled.</p>}
+            {(activeTab === "blitz1" || activeTab === "blitz2") && (
+              <p className="mt-3 text-xs text-[#8a7664]">Blitz 1 and Blitz 2 share a combined figure of 97 confirmed check-ins while the event-level split is still being reconciled.</p>
+            )}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-6">
             {current.submissions.map((project) => (
               <ProjectCard key={`${activeTab}-${project.rank}`} {...project} />
             ))}
           </div>
 
           <div className="mt-12 md:mt-16">
-            <div className="flex items-start gap-3 mb-6 md:mb-8">
-              <div className={`p-2 rounded-lg ${activeTab === "blitz1" ? "bg-purple-500/10 text-purple-400" : activeTab === "blitz2" ? "bg-pink-500/10 text-pink-400" : activeTab === "blitz3" ? "bg-blue-500/10 text-blue-400" : "bg-emerald-500/10 text-emerald-400"} shrink-0`}>
-                <Users className="w-6 h-6 md:w-8 md:h-8" />
+            <div className="mb-6 flex items-start gap-3 md:mb-8">
+              <div className="shrink-0 rounded-2xl border border-[#d9cfc2] bg-white/70 p-2 text-[#6f4cc3]">
+                <Users className="h-6 w-6 md:h-8 md:w-8" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-4xl font-bold mb-2">{current.label} — Mentors</h2>
-                <p className="text-sm md:text-base text-gray-400">{current.mentors.length} mentors supporting builders through {current.title}</p>
+                <h2 className="mb-2 text-2xl font-semibold tracking-[-0.02em] md:text-4xl">{current.label} mentors</h2>
+                <p className="text-sm text-[#6c6258] md:text-base">{current.mentors.length} mentors supporting builders through {current.title}</p>
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {current.mentors.map((mentor) => (
-                <div key={mentor.name} className="p-5 rounded-xl bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[#333] hover:border-purple-500/40 transition-all">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">{mentor.name.charAt(0)}</div>
-                    <div className="flex-1 min-w-0"><h3 className="text-base font-bold text-white truncate">{mentor.name}</h3><p className="text-xs text-purple-400">{mentor.role}</p></div>
+                <div key={mentor.name} className="rounded-[24px] border border-[#ddd3c8] bg-white/80 p-5 shadow-[0_10px_30px_rgba(36,27,21,0.05)]">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d8ccee] bg-[#f7f1ff] text-sm font-semibold text-[#6f4cc3]">{mentor.name.charAt(0)}</div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="truncate text-base font-semibold text-[#241b15]">{mentor.name}</h3>
+                      <p className="text-xs text-[#8a7664]">{mentor.role}</p>
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-400 mb-3 line-clamp-3">{mentor.expertise}</p>
-                  {mentor.twitter && <a href={`https://x.com/${mentor.twitter}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-sky-400 hover:text-sky-300 transition-colors">@{mentor.twitter} <ExternalLink className="w-3 h-3" /></a>}
+                  <p className="mb-3 text-sm leading-relaxed text-[#5f5144]">{mentor.expertise}</p>
+                  {mentor.twitter && (
+                    <a href={`https://x.com/${mentor.twitter}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-[#316b9e] transition-colors hover:text-[#214d73]">
+                      @{mentor.twitter} <ExternalLink className="h-3 w-3" />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
@@ -126,7 +153,11 @@ export default function SubmissionsPage() {
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t border-[#333]"><div className="max-w-7xl mx-auto text-center text-sm text-gray-500"><p>Frutero Club × Monad Foundation — 2026 Blitz Report</p></div></footer>
+      <footer className="border-t border-[#ddd3c8] px-4 py-8">
+        <div className="mx-auto max-w-7xl text-center text-sm text-[#8a7664]">
+          <p>Frutero Club × Monad Foundation - Q1 2026 report</p>
+        </div>
+      </footer>
     </main>
   );
 }

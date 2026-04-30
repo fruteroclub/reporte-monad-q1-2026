@@ -722,4 +722,63 @@ export const q1Stats = {
   totalLumaRegistrations,
   verifiedBuilderCheckins: 198,
   uniqueMentors: uniqueMentorNames.size,
+  coworkingSessions: 12,
+  officeHoursSessions: 24,
+  workshops: 8,
+  localActivations: 4,
+  missionSupports: 3,
 };
+
+export interface BuilderToolMetric {
+  date: string;
+  label: string;
+  conversations: number;
+  spaces: number;
+  messages: number;
+  users: number;
+}
+
+export const godinezUsageMetrics: BuilderToolMetric[] = [
+  { date: "2026-03-21", label: "Blitz 1 support window", conversations: 22, spaces: 9, messages: 947, users: 9 },
+  { date: "2026-03-27", label: "Blitz 2 support window", conversations: 29, spaces: 17, messages: 541, users: 16 },
+  { date: "2026-04-18", label: "Blitz MTY support window", conversations: 16, spaces: 7, messages: 1153, users: 7 },
+  { date: "2026-04-25", label: "Blitz GDL support window", conversations: 16, spaces: 5, messages: 704, users: 6 },
+];
+
+export const builderPackLinks = [
+  {
+    title: "Builder Pack - Blitz CDMX",
+    href: "https://fruteroclub.notion.site/Builder-Pack-Blitz-CDMX-330511282c03816ab592d6df19046b8d",
+    note: "Single source of context for agenda, Monad resources, deliverables, pitch, submit flow, and Godínez onboarding.",
+  },
+  {
+    title: "Builder Pack - Blitz Monterrey",
+    href: "https://fruteroclub.notion.site/Builder-Pack-Blitz-Monterrey-345511282c03816bbb11e588cc25a97e",
+    note: "Localized operating pack for Monterrey builders.",
+  },
+  {
+    title: "Builder Pack - Blitz Guadalajara",
+    href: "https://fruteroclub.notion.site/Builder-Pack-Blitz-Guadalajara-34c511282c038133b031de591caa7d6b?source=copy_link",
+    note: "Localized operating pack for Guadalajara builders.",
+  },
+];
+
+export const continuitySignals = [
+  {
+    title: "Frutero Talk: Blitz participants to Talent Land winners",
+    note: "Follow-up conversation with builders who first participated in a Blitz and then went on to win at Talent Land.",
+  },
+  {
+    title: "Frutero Talk: honorable mention to Guadalajara first place",
+    note: "Follow-up conversation with builders who earned honorable mention in a Blitz and later took first place in Guadalajara.",
+  },
+];
+
+export const deliveryEvidence = [
+  { label: "Coworking sessions", value: q1Stats.coworkingSessions },
+  { label: "Office hours sessions", value: q1Stats.officeHoursSessions },
+  { label: "Workshops", value: q1Stats.workshops },
+  { label: "Local activations", value: q1Stats.localActivations },
+  { label: "Monad Mission support cycles", value: q1Stats.missionSupports },
+  { label: "Blitz events", value: q1Stats.hackathons },
+];
