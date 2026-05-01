@@ -71,7 +71,7 @@ export default function SubmissionsPage() {
           <SectionTitle
             icon={<Trophy className="h-8 w-8" />}
             title="Project archive"
-            subtitle="71 approved projects across the 4 Blitz events, presented as the visible output of one layer inside the broader Q1 Builder Success program"
+            subtitle="71 approved projects across 4 Blitz events, presented as one visible output of the broader January to April 2026 Builder Success program"
           />
 
           <NavTabs active="submissions" />
@@ -79,7 +79,7 @@ export default function SubmissionsPage() {
           <div className="mb-8 flex flex-wrap gap-2">
             {([
               ["blitz1", "Blitz 1", "CDMX", "18 projects"],
-              ["blitz2", "Blitz 2", "CDMX #2", "16 projects"],
+              ["blitz2", "Blitz 2", "CDMX", "16 projects"],
               ["blitz3", "Blitz MTY", "Monterrey", "19 projects"],
               ["blitz4", "Blitz GDL", "Guadalajara", "18 approved"],
             ] as const).map(([key, label, city, count]) => (
@@ -108,9 +108,7 @@ export default function SubmissionsPage() {
               <div><span className="text-[#8a7664]">Registrations: </span><span className="font-medium text-[#241b15]">{metrics.registrations}</span></div>
               <div><span className="text-[#8a7664]">Check-ins: </span><span className="font-medium text-[#241b15]">{metrics.checkInsDisplay ?? metrics.checkIns}</span></div>
             </div>
-            {(activeTab === "blitz1" || activeTab === "blitz2") && (
-              <p className="mt-3 text-xs text-[#8a7664]">Blitz 1 and Blitz 2 share a combined figure of 97 confirmed check-ins while the event-level split is still being reconciled.</p>
-            )}
+            
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 md:gap-6">
@@ -126,7 +124,7 @@ export default function SubmissionsPage() {
               </div>
               <div>
                 <h2 className="mb-2 text-2xl font-semibold tracking-[-0.02em] md:text-4xl">{current.label} mentors</h2>
-                <p className="text-sm text-[#6c6258] md:text-base">{current.mentors.length} mentors supporting builders through {current.title}</p>
+                <p className="text-sm text-[#6c6258] md:text-base">{current.mentors.length} mentors supporting builders during {current.title}</p>
               </div>
             </div>
 
@@ -155,7 +153,7 @@ export default function SubmissionsPage() {
 
       <footer className="border-t border-[#ddd3c8] px-4 py-8">
         <div className="mx-auto max-w-7xl text-center text-sm text-[#8a7664]">
-          <p>Frutero Club × Monad Foundation - Q1 2026 report</p>
+          <p>Frutero Club × Monad Foundation - January to April 2026 report</p>
         </div>
       </footer>
     </main>

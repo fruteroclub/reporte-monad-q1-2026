@@ -507,6 +507,55 @@ export const youtubeStreams = [
     channel: "Mobil3",
     event: "Blitz 2",
   },
+  {
+    title: "Frutero Talk #43 Cómo conquistar un Monad Blitz cuando el primer intento no fue suficiente",
+    url: "https://www.youtube.com/live/6rUIpbpuRiQ?si=LtVjkCyNSg5r1QuO",
+    views: 20,
+    channel: "Frutero Club",
+    event: "Builder follow-up",
+  },
+  {
+    title: "Frutero Talk #42 Del Blitz al podio: Cómo el talento frutal conquistó TalentLand 2026 con @godinez_ai",
+    url: "https://www.youtube.com/live/dFwQjS5pxlw?si=5XQvFZTGjRHXrwXH",
+    views: 24,
+    channel: "Frutero Club",
+    event: "Builder follow-up",
+  },
+  {
+    title: "Moltiverse Hackathon - Aibus Dumbleclaw | Headmistress of Clawarts",
+    url: "https://www.youtube.com/live/wESkRnWvNRM?si=NvJDlK4rIe1jC8gc",
+    views: 48,
+    channel: "Frutero Club",
+    event: "Moltiverse support",
+  },
+  {
+    title: "Monad Blitz Monterrey - Inauguración",
+    url: "https://www.youtube.com/watch?v=mMmrzpWhBdw",
+    views: 11,
+    channel: "Frutero Club",
+    event: "Blitz MTY",
+  },
+  {
+    title: "Monad Blitz Monterrey - Demo Day",
+    url: "https://www.youtube.com/watch?v=SbV_D0ylJsY",
+    views: 28,
+    channel: "Frutero Club",
+    event: "Blitz MTY",
+  },
+  {
+    title: "Monad Blitz Guadalajara - Ceremonia de Apertura",
+    url: "https://www.youtube.com/watch?v=kqNaF-DyhXs",
+    views: 8,
+    channel: "Frutero Club",
+    event: "Blitz GDL",
+  },
+  {
+    title: "Monad Blitz Guadalajara - Demo day",
+    url: "https://www.youtube.com/watch?v=kDp-EQCflRM",
+    views: 25,
+    channel: "Frutero Club",
+    event: "Blitz GDL",
+  },
 ];
 
 // ─── Social Stats ───
@@ -516,9 +565,9 @@ export const socialStats = {
   fruteroLikes: 932,
   partnerImpressions: 47131,
   partnerLikes: 1420,
-  videoViews: 7622,
+  videoViews: 7786,
   videoLikes: 218,
-  totalImpressions: 93418,
+  totalImpressions: 93582,
   totalLikes: 2570,
 };
 
@@ -660,8 +709,7 @@ export const blitzEventMetrics: Record<"blitz1" | "blitz2" | "blitz3" | "blitz4"
     date: "February 21, 2026",
     lumaUrl: "https://luma.com/6pk4opdb",
     registrations: 128,
-    checkIns: null,
-    checkInsDisplay: "Included in combined 97",
+    checkIns: 58,
   },
   blitz2: {
     key: "blitz2",
@@ -670,8 +718,7 @@ export const blitzEventMetrics: Record<"blitz1" | "blitz2" | "blitz3" | "blitz4"
     date: "March 27, 2026",
     lumaUrl: "https://luma.com/blitz-cdmx-mar2026?tk=Tu03nM",
     registrations: 114,
-    checkIns: null,
-    checkInsDisplay: "Included in combined 97",
+    checkIns: 39,
   },
   blitz3: {
     key: "blitz3",
@@ -711,9 +758,9 @@ export const q1Stats = {
   blitz2Projects: 16,
   blitz3Projects: 19,
   blitz4Projects: 18,
-  totalImpressions: 93418,
+  totalImpressions: 93582,
   totalLikes: 2570,
-  youtubeStreams: 5,
+  youtubeStreams: 12,
   hackathons: 4,
   blitz1Votes: 495,
   blitz2Votes: 513,
@@ -765,20 +812,97 @@ export const builderPackLinks = [
 
 export const continuitySignals = [
   {
-    title: "Frutero Talk: Blitz participants to Talent Land winners",
-    note: "Follow-up conversation with builders who first participated in a Blitz and then went on to win at Talent Land.",
+    title: "Frutero Talk #42: Del Blitz al podio",
+    note: "Builders who entered through a Blitz later reached stronger competitive outcomes, including Talent Land 2026.",
   },
   {
-    title: "Frutero Talk: honorable mention to Guadalajara first place",
-    note: "Follow-up conversation with builders who earned honorable mention in a Blitz and later took first place in Guadalajara.",
+    title: "Frutero Talk #43: Second-attempt builders improved and returned stronger",
+    note: "Follow-up evidence that builders iterated after an earlier attempt instead of disappearing after the event.",
+  },
+];
+
+export const strategicLearnings = [
+  {
+    title: "Builder intent increased despite bearish market sentiment",
+    note: "Market sentiment in Mexico felt bearish, but builder intent rose. That was visible in the vibe coding bootcamp and in the hundred-plus builders who showed up across the Blitzes.",
+  },
+  {
+    title: "Each city produced a different builder profile",
+    note: "Ciudad de México skewed toward startup ambition, Monterrey toward practical industrial tools, and Guadalajara toward social and community problem-solving.",
+  },
+  {
+    title: "Monad 101 had to become shorter and sharper",
+    note: "After Blitz 2, it became clear the original workshop was too long. We shifted toward protocol benefits and venture-level use cases, which held attention better.",
+  },
+  {
+    title: "Phase 2 can now funnel with more precision",
+    note: "The pipeline is now segmented by geography, interests, and builder tendencies. That gives Phase 2 a more precise base for education and project acceleration.",
   },
 ];
 
 export const deliveryEvidence = [
-  { label: "Coworking sessions", value: q1Stats.coworkingSessions },
-  { label: "Office hours sessions", value: q1Stats.officeHoursSessions },
-  { label: "Workshops", value: q1Stats.workshops },
-  { label: "Local activations", value: q1Stats.localActivations },
-  { label: "Monad Mission support cycles", value: q1Stats.missionSupports },
+  { label: "In-person workshops", value: 3 },
+  { label: "Remote workshops", value: 1 },
+  { label: "University visits", value: 5 },
   { label: "Blitz events", value: q1Stats.hackathons },
+];
+
+export const ecosystemLinks = [
+  {
+    title: "Reto Zapopan",
+    note: "Regional accelerator linkage that expanded the downstream path for promising builders and projects.",
+  },
+  {
+    title: "Posible Nuevo León",
+    note: "Regional accelerator linkage that strengthened founder-facing opportunity flow beyond the events themselves.",
+  },
+  {
+    title: "Secretaría de Desarrollo Económico de Jalisco",
+    note: "Institutional linkage that increased public-sector proximity around the Guadalajara activation layer.",
+  },
+  {
+    title: "ReDi Guadalajara",
+    note: "Strategic alliance with ReDi Guadalajara, the Red de Emprendimiento e Innovación, strengthening local ecosystem connectivity around the Guadalajara activation.",
+  },
+];
+
+export const roadmapPhases = [
+  {
+    period: "First four-month period",
+    title: "Brand presence, talent capture, builder education, and tool development",
+    note: "This is the phase covered in the current report. The operating goal was to establish Monad presence, attract builders, educate them, and reduce friction with support tooling.",
+  },
+  {
+    period: "Second four-month period",
+    title: "AI + Monad builder education, talent funneling, and project acceleration",
+    note: "The next phase focuses on AI plus Monad education, funneling talent coming from Blitzes and the vibe coding bootcamp, and accelerating the strongest projects.",
+  },
+  {
+    period: "Third four-month period",
+    title: "Incubation of tech ventures built on Monad in Mexico",
+    note: "The final phase is designed to incubate technology ventures, potentially AI-agentic, that position Monad as the blockchain infrastructure beneath new tech entrepreneurship in Mexico.",
+  },
+];
+
+export const universityVisits = [
+  {
+    title: "Universidad de la Comunicación",
+    image: "/universities/universidad-comunicacion.jpg",
+  },
+  {
+    title: "Universidad del Norte",
+    image: "/universities/universidad-del-norte.jpg",
+  },
+  {
+    title: "Casa Frutero",
+    image: "/universities/casa-frutero.jpg",
+  },
+  {
+    title: "UNAM",
+    image: "/universities/unam.jpg",
+  },
+  {
+    title: "UAM Cuajimalpa",
+    image: "/universities/uam-cuajimalpa.jpg",
+  },
 ];
