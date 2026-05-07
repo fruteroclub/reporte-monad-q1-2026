@@ -279,8 +279,13 @@ export default function Home() {
                       <span className="text-xs uppercase tracking-[0.18em] text-[#8a7664]">{event.label}</span>
                       <span className="text-xs text-[#8a7664]">{event.dateLabel}</span>
                     </div>
-                    <h3 className="mb-1 text-lg font-semibold">{event.city}</h3>
-                      <div className="space-y-2 text-sm">
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <h3 className="text-lg font-semibold">{event.city}</h3>
+                      <a href={metrics.lumaUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-[#6f4cc3]">
+                        Luma <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
+                    <div className="space-y-2 text-sm">
                       <div className="flex justify-between gap-3"><span className="text-[#6c6258]">Projects</span><span className="font-medium">{event.projects}</span></div>
                       <div className="flex justify-between gap-3"><span className="text-[#6c6258]">Registrations</span><span className="font-medium">{metrics.registrations}</span></div>
                       <div className="flex justify-between gap-3"><span className="text-[#6c6258]">Check-ins</span><span className="font-medium text-right">{metrics.checkInsDisplay ?? metrics.checkIns}</span></div>
